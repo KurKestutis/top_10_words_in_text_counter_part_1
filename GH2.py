@@ -1,3 +1,3 @@
 #FAILAS TESTUI
 
-print("va kazka atrintinsim")
+print("va kazka atprintinsim")
