@@ -8,5 +8,5 @@ pridedu čia dar eilucius
 
 x = 0
 while x < 5:
-    print("x yra mažiau už dešimt nes jis yra lygus " + str(x))
+    print("x yra mažiau už penkis nes jis yra lygus " + str(x))
     x += 1
