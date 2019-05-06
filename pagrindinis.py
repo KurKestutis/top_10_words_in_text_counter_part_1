@@ -12,8 +12,8 @@ def pasiimti(event):
 
 """-----------Laukai/Mygtukai/Užrašai----------"""
 
-boksas = Text(langas, height=20, width=70)
-# boksas = Entry(langas)
+# boksas = Text(langas, height=20, width=70)
+boksas = Entry(langas)
 
 
 uzrasas1 = Label(langas, text="Įveskite tekstą:")
