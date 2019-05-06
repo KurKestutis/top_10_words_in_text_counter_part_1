@@ -4,12 +4,23 @@ langas = Tk()
 langas.title("Dažniausiai tekste panaudotų žodžių skaičiuoklė (Top - 10) KK X 4.0")
 langas.iconbitmap(r'top_X4.ico')
 
+# def Pasiimti duomenis iš bokso
+def pasiimti(event):
+    print(boksas.get())
+    duomenys = boksas.get()
+    print("Štai kas paiimta iš bokso: " + str(duomenys))
+
 """-----------Laukai/Mygtukai/Užrašai----------"""
 
 boksas = Text(langas, height=20, width=70)
+# boksas = Entry(langas)
+
 
 uzrasas1 = Label(langas, text="Įveskite tekstą:")
 mygtukas_pateikti = Button(langas, text="          Pateikti          ")
+mygtukas_pateikti.bind("<Button-1>", pasiimti)
+# mygtukas1.bind("<Button-1>", spausdinti) PRISIMINIMUI
+# laukas1.bind("<Return>", spausdinti)
 
 parasteWN = Label(langas, text="   ")
 parasteEN = Label(langas, text="   ")
