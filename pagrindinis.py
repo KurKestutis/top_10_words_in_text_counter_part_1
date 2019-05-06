@@ -3,13 +3,19 @@ from paste5 import *
 langas = Tk()
 langas.title("Dažniausiai tekste panaudotų žodžių skaičiuoklė (Top - 10) KK X 4.0")
 langas.iconbitmap(r'top_X4.ico')
-global duomenys
+# duomenys = ""
 
 # def Pasiimti duomenis iš bokso
 def pasiimti():
-    global duomenys
+    # global duomenys
     duomenys = boksas.get("1.0", "end-1c")
     print("Štai kas paiimta iš bokso: " + str(duomenys))
+    x = duomenys.split()
+    print(x)
+    return duomenys
+
+
+
 
 
 """-----------Laukai/Mygtukai/Užrašai----------"""
