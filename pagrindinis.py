@@ -3,13 +3,10 @@ from paste5 import *
 langas = Tk()
 langas.title("Dažniausiai tekste panaudotų žodžių skaičiuoklė (Top - 10) KK X 4.0")
 langas.iconbitmap(r'top_X4.ico')
-# duomenys = ""
-x = []
+# langas.config(background="blue")
 
 def sudet_du_listus(a,b):
     print(a+b)
-
-
 
 # Pasiimti duomenis iš bokso
 def pasiimti():
@@ -18,6 +15,7 @@ def pasiimti():
     print("Štai kas paiimta iš bokso: " + str(duomenys))
     global x
     x = duomenys.split()
+
     y=['a', 'b', 'c']
     sudet_du_listus(x, y)
 
@@ -29,12 +27,6 @@ uzrasas1 = Label(langas, text="Įveskite tekstą:")
 boksas = Text(langas, height=20, width=70)
 mygtukas_pateikti = Button(langas, text="          Pateikti          ", command=lambda: pasiimti())
 #command=lambda: pasiimti() >>> just means do this when i press the button
-
-
-# mygtukas_pateikti.bind("<Button-1>", pasiimti)
-# mygtukas_pateikti=Button(langas, command=lambda: pasiimti())
-# mygtukas1.bind("<Button-1>", spausdinti) PRISIMINIMUI
-# laukas1.bind("<Return>", spausdinti)
 
 parasteWN = Label(langas, text="   ")
 parasteEN = Label(langas, text="   ")
@@ -59,12 +51,27 @@ mygtukas_pateikti.grid(row=16, column=6, sticky=E)
 
 boksas.bind('<Button-3>', rClicker, add='')
 
-'''-------------SCCROLLBAR--------------'''
+'''-----------------SCCROLLBAR-------------------'''
 
+"""--------ATSAKYMU DALIES LENTELE-----------"""
 
-print(str(x) + " va sitas yra x'sas")
+perskyrimas_du = Label(langas, text="   ")
+perskyrimas_du.grid(row=17, column=0, sticky=E)
 
-# def ikso_funkcija():
-#     x
+zodis = Label(langas, text="Žodis:                                  ")
+zodis.grid(row=20, column=2, sticky=W)
+
+panaudotas_kartu = Label(langas, text="Panaudotas kartų:            ")
+panaudotas_kartu.grid(row=20, column=4, sticky=E)
+
+procentai = Label(langas, text="Procentais:            ")
+procentai.grid(row=20, column=6, sticky=E)
+
+skaicius1 = Label(langas, text="1   ")
+skaicius1.grid(row=22, column=1, sticky=E)
+skaicius2 = Label(langas, text="2   ")
+skaicius2.grid(row=23, column=1, sticky=E)
+skaicius3 = Label(langas, text="3   ")
+skaicius3.grid(row=24, column=1, sticky=E)
 
 langas.mainloop()
