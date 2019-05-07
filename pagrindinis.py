@@ -6,13 +6,21 @@ langas.iconbitmap(r'top_X4.ico')
 # duomenys = ""
 x = []
 
+def sudet_du_listus(a,b):
+    print(a+b)
+
+
+
 # Pasiimti duomenis iš bokso
 def pasiimti():
     # global duomenys
     duomenys = boksas.get("1.0", "end-1c")
     print("Štai kas paiimta iš bokso: " + str(duomenys))
     global x
-    x += duomenys.split()
+    x = duomenys.split()
+    y=['a', 'b', 'c']
+    sudet_du_listus(x, y)
+
     print(x)
     return x
 
@@ -51,10 +59,12 @@ mygtukas_pateikti.grid(row=16, column=6, sticky=E)
 
 boksas.bind('<Button-3>', rClicker, add='')
 
-
 '''-------------SCCROLLBAR--------------'''
 
 
 print(str(x) + " va sitas yra x'sas")
+
+# def ikso_funkcija():
+#     x
 
 langas.mainloop()
