@@ -4,25 +4,21 @@ langas = Tk()
 langas.title("Dažniausiai tekste panaudotų žodžių skaičiuoklė (Top - 10) KK X 4.0")
 langas.iconbitmap(r'top_X4.ico')
 # duomenys = ""
+x = []
 
-# def Pasiimti duomenis iš bokso
+# Pasiimti duomenis iš bokso
 def pasiimti():
     # global duomenys
     duomenys = boksas.get("1.0", "end-1c")
     print("Štai kas paiimta iš bokso: " + str(duomenys))
-    x = duomenys.split()
+    global x
+    x += duomenys.split()
     print(x)
-    return duomenys
-
-
-
-
+    return x
 
 """-----------Laukai/Mygtukai/Užrašai----------"""
-
-boksas = Text(langas, height=20, width=70)
-
 uzrasas1 = Label(langas, text="Įveskite tekstą:")
+boksas = Text(langas, height=20, width=70)
 mygtukas_pateikti = Button(langas, text="          Pateikti          ", command=lambda: pasiimti())
 #command=lambda: pasiimti() >>> just means do this when i press the button
 
@@ -51,22 +47,14 @@ boksas.grid(row=2, column=1, columnspan=6, sticky=W)
 uzrasas1.grid(row=1, column=1, sticky=W)
 mygtukas_pateikti.grid(row=16, column=6, sticky=E)
 
-
-
 """--------------------POPUO MENU----------------"""
 
 boksas.bind('<Button-3>', rClicker, add='')
 
 
-'''-------------SCCROLLBAR EXAMPLES--------------'''
+'''-------------SCCROLLBAR--------------'''
 
 
-# scroll = Scrollbar(boksas)
-# scroll.grid()
-# scroll.grid(row=3, column=1, columnspan=6, sticky=E)
-# row=2, column=1, columnspan=6, sticky=W
-
-# scroll.config(command=)
-
+print(str(x) + " va sitas yra x'sas")
 
 langas.mainloop()
