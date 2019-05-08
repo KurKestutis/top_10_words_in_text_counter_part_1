@@ -7,8 +7,8 @@ langas.iconbitmap(r'top_X4.ico')
 
 ats_list =["", ""]
 
-def sudet_du_listus(a, b):
-    ats_list = a + b
+def pateikti_atsakyma(a):
+    ats_list = a
     atsakymas1.set(ats_list[0])
 
 # Pasiimti duomenis iš bokso
@@ -16,8 +16,8 @@ def pasiimti():
     duomenys = boksas.get("1.0", "end-1c")
     print("Štai kas paiimta iš bokso: " + str(duomenys))
     x = duomenys.split()
-    y=[]
-    sudet_du_listus(x, y)
+
+    pateikti_atsakyma(x)
     print(x)
     return x
 
