@@ -5,25 +5,20 @@ langas.title("Dažniausiai tekste panaudotų žodžių skaičiuoklė (Top - 10) 
 langas.iconbitmap(r'top_X4.ico')
 # langas.config(background="blue")
 
-ats_list =["ATSAKYMAS", "du"]
+ats_list =["", ""]
 
 def sudet_du_listus(a, b):
-    # global ats_list
     ats_list = a + b
-    # print(ats_list)
-
-    atsakymas.set(ats_list[0])
+    atsakymas1.set(ats_list[0])
 
 # Pasiimti duomenis iš bokso
 def pasiimti():
-    # global ats_list
     duomenys = boksas.get("1.0", "end-1c")
     print("Štai kas paiimta iš bokso: " + str(duomenys))
-    # global x
     x = duomenys.split()
-    y=['a', 'b', 'c']
+    y=[]
     sudet_du_listus(x, y)
-    # print(x)
+    print(x)
     return x
 
 """-----------Laukai/Mygtukai/Užrašai----------"""
@@ -79,9 +74,10 @@ skaicius3 = Label(langas, text="3   ")
 skaicius3.grid(row=24, column=1, sticky=E)
 
 """----------ATSAKYMU SLOTAI-----------"""
-atsakymas = StringVar()
-ats1 = Label(langas, textvariable= atsakymas)
-#  str(ats_list[0])
+atsakymas1 = StringVar()
+ats1 = Label(langas, textvariable= atsakymas1)
 ats1.grid(row=22, column=2, sticky=W)
+
+
 
 langas.mainloop()
