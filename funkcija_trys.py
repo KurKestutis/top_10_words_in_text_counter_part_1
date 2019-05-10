@@ -1,20 +1,20 @@
-# open and read the text
-ge = open("great_expectations_complete.txt").read()
+pateikta = ("vienas, du, du, trys, trys, trys, keturi, keturi, keturi, keturi, "
+            "penki, penki, penki, penki, penki, šeši, šeši, šeši, šeši, šeši, "
+            "šeši, septyni, septyni, septyni, septyni, septyni, septyni, "
+            "septyni, aštuoni, aštuoni, aštuoni, aštuoni, aštuoni, aštuoni, aštuoni, aštuoni,")
 
-# convert the text to lower case, strip punctuation and split into words
-ge = ge.lower()
-for punctuation in [',' , ':' , '.' , '"' , '!' , '?' , '–' , '(' , ')' , '\n' , '\r']:
-    ge = ge.replace(punctuation, ' ')
-all_words = ge.split(" ")
+# konvertuoti viską į mažąsias raides ir panaikinti skirybos ženklus ir išplitinti į listą
+pateikta = pateikta.lower()
+for skiryba in [',' , ':' , '.' , '"' , '!' , '?' , '–' , '(' , ')' , '\n' , '\r']:
+    pateikta = pateikta.replace(skiryba, '')
+visi_zodziai = pateikta.split(" ")
+print(visi_zodziai)
 
-# build up the dict of word counts
-word_count = {}
-for word in all_words:
-    current_count = word_count.get(word, 0)
-    new_count = current_count + 1
-    word_count[word] = new_count
+#suskaiciuoti
+zodziu_skaicius = {}
+for zodis in visi_zodziai:
+    suskaiciuota_dabar = zodziu_skaicius.get(zodis, 0)
+    suskaiciuota_dabar_update = suskaiciuota_dabar + 1
+    zodziu_skaicius[zodis] = suskaiciuota_dabar_update
+print(zodziu_skaicius)
 
-# iterate over items and print the word if the count is great than 1000
-for word, count in word_count.items():
-    if count > 1000:
-    print(word)
