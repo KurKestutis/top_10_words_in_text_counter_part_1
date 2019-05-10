@@ -18,7 +18,18 @@ for zodis in visi_zodziai:
     zodziu_skaicius[zodis] = suskaiciuota_dabar_update
 print(zodziu_skaicius)
 
+
+"""-----------SORTINIMAS---------------"""
 import collections
-Player = collections.namedtuple('Player', 'score name')
-d = {'John':5, 'Alex':10, 'Richard': 7}
+zodis = collections.namedtuple('zodis', 'score name')
+# d = zodziu_skaicius
+d = {'vienas': 1, 'du': 2, 'trys': 3, 'keturi': 4, 'penki': 5, 'šeši': 6, 'septyni': 7, 'aštuoni': 8}
+worst = sorted(zodis(v,k) for (k,v) in d.items())
+best = sorted([zodis(v,k) for (k,v) in d.items()], reverse=True)
+print(best[0])
+print(best[0].name)
+print(best[0].score)
+
+
+
 
