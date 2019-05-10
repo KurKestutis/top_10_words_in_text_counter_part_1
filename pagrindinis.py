@@ -1,4 +1,5 @@
 from paste5 import *
+import collections
 
 langas = Tk()
 langas.title("Dažniausiai tekste panaudotų žodžių skaičiuoklė (Top - 10) KK X 4.0")
