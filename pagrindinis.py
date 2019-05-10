@@ -21,6 +21,8 @@ def pasiimti():
     print(x)
     return x
 
+
+
 """-----------Laukai/Mygtukai/Užrašai----------"""
 uzrasas1 = Label(langas, text="Įveskite tekstą:")
 boksas = Text(langas, height=20, width=70)
@@ -51,6 +53,7 @@ mygtukas_pateikti.grid(row=16, column=6, sticky=E)
 boksas.bind('<Button-3>', rClicker, add='')
 
 '''-----------------SCCROLLBAR-------------------'''
+#nesugebėjau padaryti:(
 
 """--------ATSAKYMU DALIES LENTELE-----------"""
 
