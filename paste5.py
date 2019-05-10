@@ -11,7 +11,7 @@ def rClicker(e):
             e.widget.event_generate('<Control-c>')
 
         def rClick_Cut(e):
-            e.widget.event_generate('<Control-x>')
+            e.widget.event_generate('<Control-zodziai>')
 
         def rClick_Paste(e):
             e.widget.event_generate('<Control-v>')

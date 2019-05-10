@@ -18,3 +18,7 @@ for zodis in visi_zodziai:
     zodziu_skaicius[zodis] = suskaiciuota_dabar_update
 print(zodziu_skaicius)
 
+import collections
+Player = collections.namedtuple('Player', 'score name')
+d = {'John':5, 'Alex':10, 'Richard': 7}
+
